@@ -5,13 +5,10 @@ class String
     special_words = ["and"]
 
     sentance.each do |word|
-      if special_words.include?(word)
-        uppercase_sentance.push(word)
-      else
+      if !special_words.include?(word)
         word.capitalize!()
-        uppercase_sentance.push(word)
       end
-
+      uppercase_sentance.push(word)
     end
 
     uppercase_sentance.join(" ")
